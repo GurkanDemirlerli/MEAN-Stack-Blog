@@ -1,0 +1,31 @@
+{
+  "name": "mean-stack-blog",
+  "version": "1.0.0",
+  "description": "Blog site with MEAN",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GurkanDemirlerli/MEAN-Stack-Blog.git"
+  },
+  "keywords": [
+    "MEAN",
+    "Mongo",
+    "Express",
+    "Angular",
+    "Node",
+    "Blog"
+  ],
+  "author": "Gurkan Demirlerli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GurkanDemirlerli/MEAN-Stack-Blog/issues"
+  },
+  "homepage": "https://github.com/GurkanDemirlerli/MEAN-Stack-Blog#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.4"
+  }
+}
