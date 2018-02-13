@@ -1,4 +1,5 @@
 /node_modules
 /client/node_modules
 /client/dist
-/client/e2e
+/client/e2e/*.js
+/client/e2e/*.map
