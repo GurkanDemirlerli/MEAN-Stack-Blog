@@ -16,7 +16,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegisterComponent } from './components/register/register.component';
 
 //===== My Services =====
-import { AuthService } from './sevices/auth.service';
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -26,7 +27,8 @@ import { AuthService } from './sevices/auth.service';
     NavbarComponent,
     HomeComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
