@@ -15,6 +15,9 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegisterComponent } from './components/register/register.component';
 
+//===== My Services =====
+import { AuthService } from './sevices/auth.service';
+
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { RegisterComponent } from './components/register/register.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

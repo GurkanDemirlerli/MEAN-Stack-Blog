@@ -58,7 +58,7 @@ let passwordLengthChecker = (password) => {
     if (!password) {
         return false;
     } else {
-        if (password.length > 8 || password.length > 35) {
+        if (password.length < 8 || password.length > 35) {
             return false;
         } else {
             return true;
