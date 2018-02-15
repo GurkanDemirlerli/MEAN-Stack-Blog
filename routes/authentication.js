@@ -202,6 +202,56 @@ module.exports = (router) => {
             }
         }
     });
+    //===========AUTHORIZE MIDDLEWARE===========
+
+    router.use((req, res, next) => {
+        const token = req.headers['authorization'];
+        if (!token) {
+            res.json({
+                success: false,
+                message: 'No token provided'
+            });
+        } else {
+            jwt.verify(token, config.secret, (err, decoded) => {
+                if (err) {
+                    res.json({
+                        success: false,
+                        message: 'Invalid token : ' + err
+                    });
+                } else {
+                    req.decoded = decoded;
+                    next();
+                }
+            });
+        }
+    });
+
+    router.get('/profile', (req, res) => {
+        User.findOne({
+                _id: req.decoded.userId
+            })
+            .select('username email')
+            .exec((err, user) => {
+                if (err) {
+                    res.json({
+                        success: false,
+                        message: err
+                    });
+                } else {
+                    if (!user) {
+                        res.json({
+                            success: false,
+                            message: 'User not found'
+                        });
+                    } else {
+                        res.json({
+                            success: true,
+                            user: user
+                        });
+                    }
+                }
+            });
+    });
 
     return router;
 }

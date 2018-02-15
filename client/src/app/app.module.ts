@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+//======VENDORS=======
+import { FlashMessagesModule } from 'angular2-flash-messages/module/module';
 
 //====My Modules====
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +20,8 @@ import { RegisterComponent } from './components/register/register.component';
 //===== My Services =====
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
+
 
 
 
@@ -28,14 +32,16 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     DashboardComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [
     AuthService

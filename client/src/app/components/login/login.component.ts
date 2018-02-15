@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
     this.disableForm();
     const user = {
       username: this.form.get('username').value,
-      password: this.form.get('username').value
+      password: this.form.get('password').value
     };
 
     this.authService.login(user).subscribe((data) => {
