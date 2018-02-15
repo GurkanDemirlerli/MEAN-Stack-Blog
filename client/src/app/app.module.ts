@@ -16,12 +16,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegisterComponent } from './components/register/register.component';
-
-//===== My Services =====
-import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
+//===== My Services =====
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './Guards/auth.guard';
+import { NotAuthGuard } from './Guards/notAuth.guard';
 
 
 
@@ -44,7 +45,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     FlashMessagesModule.forRoot()
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard,
+    NotAuthGuard
   ],
   bootstrap: [AppComponent]
 })
