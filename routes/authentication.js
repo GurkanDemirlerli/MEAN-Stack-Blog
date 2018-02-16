@@ -202,7 +202,7 @@ module.exports = (router) => {
             }
         }
     });
-    //===========AUTHORIZE MIDDLEWARE===========
+    // ===========AUTHORIZE MIDDLEWARE===========
 
     router.use((req, res, next) => {
         const token = req.headers['authorization'];

@@ -23,6 +23,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './Guards/auth.guard';
 import { NotAuthGuard } from './Guards/notAuth.guard';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogService } from './services/blog.service';
 
 
 
@@ -34,7 +36,8 @@ import { NotAuthGuard } from './Guards/notAuth.guard';
     DashboardComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { NotAuthGuard } from './Guards/notAuth.guard';
   providers: [
     AuthService,
     AuthGuard,
-    NotAuthGuard
+    NotAuthGuard,
+    BlogService
   ],
   bootstrap: [AppComponent]
 })
